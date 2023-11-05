@@ -13,7 +13,7 @@ class splashactivity : AppCompatActivity() {
         setContentView(R.layout.splashactivity)
 
         val funciontime = Handler(Looper.getMainLooper())
-        val time: Long = 2000
+        val time: Long = 4000
 
         funciontime.postDelayed({
             val i = Intent(this, MainActivity::class.java)

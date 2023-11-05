@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val outAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right)
 
 
+
         viewFlipper.inAnimation = inAnimation
         viewFlipper.outAnimation = outAnimation
 

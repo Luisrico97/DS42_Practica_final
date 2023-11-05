@@ -4,40 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivity">
 
+
+    tools:context=".MainActivity">
 
     <ViewFlipper
         android:id="@+id/view_eat"
         android:layout_width="match_parent"
         android:layout_height="342dp"
+        android:autoStart="true"
+        android:flipInterval="3000"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autoStart="true"
-        android:flipInterval="2000">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:src="@drawable/logo" />
 
         <ImageView
-
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
-            android:src="@drawable/menudo" />
+            android:src="@drawable/tamales" />
 
         <ImageView
-
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/asada" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:src="@drawable/pozole" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/chimichanga" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/guacamole" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/flautas" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/quesadillas" />
 
     </ViewFlipper>
 
@@ -46,28 +75,42 @@
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
         android:text="Bienvenido"
-        android:layout_marginTop="50dp"
-        android:textSize="40dp"
+        android:background="@drawable/borde"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/view_eat"
+        android:textSize="40dp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_eat" />
 
     <Button
         android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mi cuenta"
-        android:minHeight="55dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/borde_button"
+        android:text="Mi Cuenta"
+        android:textColor="@color/black"
         android:textSize="30dp"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/welcome"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="@id/welcome"
+        app:layout_constraintStart_toStartOf="@id/welcome"
+        app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/borde_button"
+        android:text="Monedero"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="@id/profile"
+        app:layout_constraintStart_toStartOf="@id/profile"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
