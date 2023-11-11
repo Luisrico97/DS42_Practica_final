@@ -1,5 +1,6 @@
 package com.rimomo.finalprojet
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         R.drawable.menudo,
         R.drawable.pozole
     )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val viewFlipper = findViewById<ViewFlipper>(R.id.view_eat)
         val inAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left)
         val outAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right)
+        val Btnprofile = findViewById<Button>(R.id.profile)
 
 
 
@@ -37,6 +38,14 @@ class MainActivity : AppCompatActivity() {
                 RelativeLayout.LayoutParams.MATCH_PARENT,
             )
             viewFlipper.addView(imageView)
+
+
+        }
+        Btnprofile.setOnClickListener {
+
+
+            val i = Intent(this, profile_activity::class.java)
+            startActivity(i)
 
         }
     }
