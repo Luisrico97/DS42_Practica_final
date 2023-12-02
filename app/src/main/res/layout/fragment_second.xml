@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".SecondFragment">
+
+    <ImageView
+        android:id="@+id/imageClient"
+        android:layout_width="211sp"
+        android:layout_height="224sp"
+        android:layout_marginTop="70sp"
+        android:layout_marginEnd="140dp"
+        android:src="@drawable/rambo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/InsertMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        android:layout_marginTop="50sp"
+        android:layout_marginStart="33sp"
+        app:layout_constraintTop_toBottomOf="@id/MoneyEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/MoneyEdit"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:progressBackgroundTint="@color/orange"
+        android:progressTint="@color/orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/InsertMoney"
+        app:layout_constraintEnd_toEndOf="@id/MoneyEdit"
+        />
+
+    <EditText
+        android:id="@+id/MoneyEdit"
+        android:layout_width="193sp"
+        android:layout_height="48sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="100sp"
+        android:background="@drawable/borde"
+        android:ems="8"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:text=""
+        android:hint="Ingrese cantidad:"
+        app:layout_constraintEnd_toEndOf="@id/imageClient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageClient" />
+
+    <TextView
+        android:id="@+id/TextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:layout_marginStart="15sp"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintStart_toEndOf="@id/imageClient"
+        app:layout_constraintBottom_toBottomOf="@id/imageClient"
+        app:layout_constraintTop_toTopOf="@id/imageClient"
+        />
+
+    <TextView
+        android:id="@+id/Client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rambo Adalberto."
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@id/imageClient"
+        app:layout_constraintBottom_toBottomOf="@id/imageClient"
+        app:layout_constraintTop_toTopOf="@id/imageClient" />
+
+    <TextView
+        android:id="@+id/totaltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:ems="10"
+        app:layout_constraintBottom_toTopOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="@id/progressBar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
